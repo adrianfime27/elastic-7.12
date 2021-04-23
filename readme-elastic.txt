@@ -7,8 +7,8 @@ sudo sh install-elastic.sh
 sudo nano /etc/elasticsearch/elasticsearch.yml
 cluster.name: puntadelicia
 node.name: master-1 ### para nodos poner node-1 o node-2
-network.port: 192.168.2.104 ## ip de la VM
-http.host: 9200
+network.host: 192.168.2.104 ## ip de la VM
+http.port: 9200
 discovery.seed_hosts: ["192.168.2.104","192.168.2.48","192.168.2.188"] ### en este caso se hizo master-1, node-1, node-2 y en ese orden se escribe en los archivos de los demás nodos.
 cluster.initial_master_nodes: ["master-1"]
 /*agregar estas lineas, ya que no están dentro del archivo*/
